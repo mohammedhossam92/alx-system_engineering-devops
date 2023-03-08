@@ -13,3 +13,4 @@ seventh for making directory
 13- file command for file type
 14- ln -s fot symbolic link
 15 - cp -u  copyn files only if the don't exist in the destination dir      
+16- rm *~ . for removing the the files end with ~
