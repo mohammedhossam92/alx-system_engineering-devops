@@ -10,4 +10,5 @@ seventh for making directory
 10- rm -r for removing dir and its content
 11- cd - go back
 12- listing . for current and .. for parent and /boot for the third dir
-13- file command for file type      
+13- file command for file type
+14- ln -s fot symbolic link      
