@@ -6,4 +6,5 @@ fifth script for the listing hidden file
 sixth script is for lsiting numeric
 seventh for making directory
 8 - mv for moving file form dir to another
-9- rm for removing the file     
+9- rm for removing the file
+10- rm -r for removing dir and its content     
