@@ -1,3 +1,4 @@
 first script pwd for printing working directory
 second script for listing
-third script for bringing user home  
+third script for bringing user home
+fourth script for bringing the long format   
