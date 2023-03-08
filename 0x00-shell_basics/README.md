@@ -9,4 +9,5 @@ seventh for making directory
 9- rm for removing the file
 10- rm -r for removing dir and its content
 11- cd - go back
-12- listing . for current and .. for parent and /boot for the third dir      
+12- listing . for current and .. for parent and /boot for the third dir
+13- file command for file type      
