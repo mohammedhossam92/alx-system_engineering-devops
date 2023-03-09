@@ -1,1 +1,1 @@
-1- chown for changing user owner
+1-su user  for changing user to specific user
