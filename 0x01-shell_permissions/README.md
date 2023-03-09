@@ -2,3 +2,4 @@
 2- id -un for printing effective user id username
 3- id -gn  for printing all the currents groups 
 4- chown owner filename for changing the file owner
+5- touch file name for creating empty file
