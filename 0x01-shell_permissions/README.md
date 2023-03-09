@@ -4,4 +4,5 @@
 4- chown owner filename for changing the file owner
 5- touch file name for creating empty file
 6- 744 
-7-7555555
+7-755555
+56456555
