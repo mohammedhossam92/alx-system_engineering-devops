@@ -1,2 +1,2 @@
 #!/bin/bash
-cat icta |head -3 | tail -1
+cat icta | head -3 | tail +3 
