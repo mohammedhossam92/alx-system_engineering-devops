@@ -9,7 +9,7 @@ def number_of_subscribers(subreddit):
 
     # Construct the URL for the subreddit's about.json endpoint
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    
+
     try:
         # Send a GET request to the Reddit API
         response = requests.get(url, headers=headers, allow_redirects=False)
