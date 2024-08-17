@@ -2,6 +2,7 @@
 """module to get subscribers"""
 import requests
 
+
 def number_of_subscribers(subreddit):
     # Set the custom User-Agent to avoid being blocked by Reddit
     headers = {'User-Agent': 'Mozilla/5.0'}
