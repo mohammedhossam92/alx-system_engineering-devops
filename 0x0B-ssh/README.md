@@ -1,2 +1,2 @@
-read me file 
-ssh rsa
+task -0 use your prive key
+steps
