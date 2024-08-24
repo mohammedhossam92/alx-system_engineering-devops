@@ -1,15 +1,59 @@
 server {
     listen 80 default_server;
-    listen [::]:80 default_server;
+    listen [::]:80 default_server ipv6only=on;
+
+    # Root and index directives
+    root /usr/share/nginx/html;
+    index index.html index.htm;
+
+    # Server name
     server_name _;
 
-    location /api/ {
-        proxy_pass http://127.0.0.1:5002;
+    # Default location block
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # Proxy requests for /airbnb-onepage to port 5000
+    location /airbnb-onepage/ {
+        proxy_pass http://localhost:5000/airbnb-onepage/;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
     }
 
-    location / {
-        return 404;
+    # Proxy requests for /airbnb-dynamic/number_odd_or_even to port 5001
+    location /airbnb-dynamic/number_odd_or_even/ {
+        proxy_pass http://localhost:5001/number_odd_or_even/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # Proxy requests for /api/ to port 5002
+    location /api/ {
+        proxy_pass http://localhost:5002/api/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # Redirect location
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+    }
+
+    # Error page handling
+    error_page 404 /404.html;
+    location = /404.html {
+        root /usr/share/nginx/html;
+    }
+
+    # Serve static files from /data/web_static/current/
+    location /web_static/ {
+        alias /data/web_static/current/;
+    }
+
+    # Serve static files from /data/web_static/current/ (alternative route)
+    location /hbnb_static/ {
+        alias /data/web_static/current/;
     }
 }
+
