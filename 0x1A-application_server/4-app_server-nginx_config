@@ -13,4 +13,3 @@ server {
         return 404;
     }
 }
-
